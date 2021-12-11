@@ -2,7 +2,14 @@ const flow = document.querySelector(".flow")
 let mousedown = false;
 let pos = {}
 
-document.addEventListener("mouseup", ()=> mousedown = false )
+document.addEventListener("mouseup", ()=> {
+    mousedown = false
+
+    flow.style.boxShadow = "none"
+    flow.style.border = "1px solid transparent"
+    flow.style.transition = ".5s"
+
+})
 document.addEventListener("mouseouter", ()=> mousedown = false )
 document.addEventListener("mousemove", function(e){
 
@@ -21,5 +28,9 @@ document.addEventListener("mousedown", (e) => {
     const {x, y} = e.target.getBoundingClientRect()
     pos["x"] = (e.x - x) 
     pos["y"] = (e.y - y) 
+
+    flow.style.boxShadow = "2px 2px 2px 0px #00000014"
+    flow.style.border = "1px solid #0000001f"
+    flow.style.transition = "0s"
 
 })
