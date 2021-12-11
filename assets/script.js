@@ -4,7 +4,7 @@ let divMouse = {}
 
 document.addEventListener("mousemove", function(e){
 
-    if(!moausdown || !e.target.hasAttribute("data-flow") || !divMouse) return
+    if(!moausdown || !divMouse) return
 
     const react = e
     
