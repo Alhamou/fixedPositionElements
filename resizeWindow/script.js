@@ -1,10 +1,10 @@
 const windowTop = document.querySelector(".windowTop")
-const middle = document.querySelector(".middle")
+const resize = document.querySelector(".resize")
 const windowBottom = document.querySelector(".windowBottom")
 
 
-const middleHeight = middle.getClientRects()[0].height
-const vh = window.innerHeight - middleHeight
+const resizeHeight = resize.getClientRects()[0].height
+const vh = window.innerHeight - resizeHeight
 let mode = false
 
 document.addEventListener("mousemove", function(e){
