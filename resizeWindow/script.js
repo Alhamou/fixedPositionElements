@@ -18,11 +18,5 @@ document.addEventListener("mousemove", function(e){
 
 
 
-document.addEventListener("mousedown", function(e){
-  if(!e.target.dataset.hasOwnProperty("resize")) return
-  mode = true
-})
-
-document.addEventListener("mouseup", function(e){
-  mode = false
-})
+document.addEventListener("mousedown",() => mode = true)
+document.addEventListener("mouseup", () => mode = false)
