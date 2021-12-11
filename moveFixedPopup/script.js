@@ -6,7 +6,7 @@ document.addEventListener("mouseup", ()=> mousedown = false )
 document.addEventListener("mouseouter", ()=> mousedown = false )
 document.addEventListener("mousemove", function(e){
 
-    if(!mousedown || !pos) return
+    if(!mousedown) return
 
     flow.style.left =  e.x - pos.x + "px"
     flow.style.top =  e.y - pos.y + "px"
