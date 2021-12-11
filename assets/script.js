@@ -5,35 +5,25 @@ let divMouse = {}
 document.addEventListener("mousemove", function(e){
 
     if(!moausdown || !divMouse) return
-
-    const react = e
+    const {x, y} = e
     
-    flows.style.left =  react.x - divMouse.x + "px"
-    flows.style.top =  react.y - divMouse.y + "px"
+    flows.style.left =  x - divMouse.x + "px"
+    flows.style.top =  y - divMouse.y + "px"
 
 })
-
-
 
 document.addEventListener("mousedown", (e) => {
 
     if(!e.target.hasAttribute("data-flow")) return
 
     moausdown = true 
-
-    const react = e
+    const {x, y} = e
     const target = e.target.getClientRects()[0]
-    
-    divMouse["x"] = (react.x - target.x) 
-    divMouse["y"] = (react.y - target.y) 
+    divMouse["x"] = (x - target.x) 
+    divMouse["y"] = (y - target.y) 
 
 
 })
-document.addEventListener("mouseup", ()=> {
-    moausdown = false
-})
 
-
-document.addEventListener("mouseouter", ()=> {
-    moausdown = false
-})
+document.addEventListener("mouseup", ()=> moausdown = false )
+document.addEventListener("mouseouter", ()=> moausdown = false )
