@@ -5,6 +5,7 @@
 
 Demo: [link](https://playcode.io/843362/)
 
+```javascript
     const  flows  =  document.querySelector(".flow")
     
     let  mousedown  =  false;
@@ -59,3 +60,4 @@ Demo: [link](https://playcode.io/843362/)
     document.addEventListener("mouseup", ()=>  mousedown  =  false )
     
     document.addEventListener("mouseouter", ()=>  mousedown  =  false )
+```

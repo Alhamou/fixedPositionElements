@@ -2,6 +2,7 @@
 
 Demo: [link](https://playcode.io/843459/)
 
+```javascript
     const  windowTop  =  document.querySelector(".windowTop")
     
     const  resize  =  document.querySelector(".resize")
@@ -52,3 +53,4 @@ Demo: [link](https://playcode.io/843459/)
     mode  =  false
     
     })
+```
