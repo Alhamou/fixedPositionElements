@@ -1,0 +1,24 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+div.windowTop{
+  background-color: beige;
+  height: calc((100vh / 2) - 2px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.middle {
+  background-color: aquamarine;
+  height: 4px;
+  cursor: row-resize;
+}
+div.windowBottom{
+  background-color: beige;
+  height: calc((100vh / 2) - 2px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
