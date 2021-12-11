@@ -1,14 +1,14 @@
 const flows = document.querySelector(".flow")
-let moausdown = false;
-let divMouse = {}
+let mousedown = false;
+let initPosition = {}
 
 document.addEventListener("mousemove", function(e){
 
-    if(!moausdown || !divMouse) return
+    if(!mousedown || !initPosition) return
     const {x, y} = e
     
-    flows.style.left =  x - divMouse.x + "px"
-    flows.style.top =  y - divMouse.y + "px"
+    flows.style.left =  x - initPosition.x + "px"
+    flows.style.top =  y - initPosition.y + "px"
 
 })
 
@@ -16,14 +16,14 @@ document.addEventListener("mousedown", (e) => {
 
     if(!e.target.hasAttribute("data-flow")) return
 
-    moausdown = true 
+    mousedown = true 
     const {x, y} = e
     const target = e.target.getClientRects()[0]
-    divMouse["x"] = (x - target.x) 
-    divMouse["y"] = (y - target.y) 
+    initPosition["x"] = (x - target.x) 
+    initPosition["y"] = (y - target.y) 
 
 
 })
 
-document.addEventListener("mouseup", ()=> moausdown = false )
-document.addEventListener("mouseouter", ()=> moausdown = false )
+document.addEventListener("mouseup", ()=> mousedown = false )
+document.addEventListener("mouseouter", ()=> mousedown = false )
